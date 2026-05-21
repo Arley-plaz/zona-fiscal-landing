@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>ZONA FISCAL. | Consultoría Fiscal con Sergi Cebreiro</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-container": "#2563eb",
+            "on-primary-container": "#eeefff",
+            "primary": "#b4c5ff",
+            "on-surface": "#dfe2f2",
+            "outline": "#8d90a0",
+            "surface": "#0f131e",
+            "surface-container-high": "#262a36",
+            "surface-variant": "#313441",
+            "surface-container": "#1b1f2b",
+            "secondary-container": "#3e495d",
+            "on-primary": "#002a78",
+            "background": "#0f131e",
+            "secondary": "#bcc7de",
+            "outline-variant": "#434655",
+            "surface-bright": "#353945",
+            "surface-container-lowest": "#0a0e19",
+            "tertiary": "#adc6ff",
+            "surface-dim": "#0f131e",
+            "surface-container-highest": "#313441",
+            "surface-container-low": "#171b27",
+            "on-surface-variant": "#c3c6d7",
+            "tertiary-container": "#0f69dc",
+            "on-background": "#dfe2f2"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "max-width": "1280px",
+            "lg": "48px",
+            "xl": "80px",
+            "sm": "12px",
+            "margin-mobile": "16px",
+            "gutter": "24px",
+            "xs": "4px",
+            "md": "24px",
+            "margin-desktop": "48px",
+            "base": "8px"
+          },
+          fontFamily: { "sans": ["Inter", "sans-serif"] },
+          fontSize: {
+            "display": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-md": ["16px", { lineHeight: "24px" }],
+            "body-sm": ["14px", { lineHeight: "20px" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+            "label-sm": ["11px", { lineHeight: "14px" }],
+            "body-lg": ["18px", { lineHeight: "28px" }],
+            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0b0f1a;
+      color: #dfe2f2;
+      font-family: 'Inter', sans-serif;
+    }
+    .tonal-layer-1 {
+      background-color: #161b26;
+      border: 1px solid #1e293b;
+    }
+    .glass-effect {
+      background: rgba(22, 27, 38, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(30, 41, 59, 0.5);
+    }
+    /* Ratio 16:9 para el video */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+    .video-wrapper iframe,
+    .video-wrapper video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+    <div class="flex justify-between items-center px-gutter py-4 w-full max-w-max-width mx-auto">
+      <div class="text-headline-md font-black text-on-surface">ZONA FISCAL.</div>
+      <div class="hidden md:flex gap-base">
+        <a class="text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Inicio</a>
+        <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors px-3" href="#">Equipo</a>
+        <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors px-3" href="#">Servicios</a>
+        <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors px-3" href="#">Dudas</a>
+        <a class="text-body-md text-on-surface-variant hover:text-primary transition-colors px-3" href="#">Contacto</a>
+      </div>
+      <!-- BOTÓN DE PAGO NAVBAR -->
+      <a
+        href="#pago"
+        class="bg-primary-container text-on-primary-container text-label-md px-6 py-3 rounded-lg font-bold tracking-wider hover:brightness-110 transition-all"
+      >
+        AGENDAR ASESORÍA
+      </a>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-xl overflow-hidden">
+
+    <!-- ═══════════════════════════════════════════
+         HERO — texto izquierda / vídeo derecha
+    ═══════════════════════════════════════════ -->
+    <div class="max-w-max-width mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-xl items-center min-h-[80vh]">
+
+      <!-- Izquierda -->
+      <div class="flex flex-col items-start gap-md">
+
+        <!-- Badge -->
+        <div class="px-3 py-1 rounded-full bg-secondary-container/30 border border-primary/20 text-primary text-label-sm uppercase tracking-widest">
+          Consultoría Fiscal con Sergi Cebreiro
+        </div>
+
+        <!-- ── PROMESA (pendiente de definir con Kelly) ──────────────
+             Reemplazar el texto de h1 con la promesa final del cliente.
+             Ejemplo actual solo de referencia.
+        ─────────────────────────────────────────────────────────────── -->
+        <h1 class="text-display font-black text-on-surface leading-tight">
+          <!-- TODO: insertar promesa definitiva aquí -->
+          Optimizá tu <span class="text-primary-container">situación fiscal</span> hoy mismo
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="text-body-lg text-on-surface-variant max-w-xl">
+          Somos especialistas en derecho fiscal y tributario. Nuestro equipo te ayuda a reducir tu carga impositiva de forma legal y segura, con la máxima eficiencia financiera.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-md flex flex-wrap gap-md items-center">
+
+          <!-- ── BOTÓN DE PAGO PRINCIPAL ────────────────────────────
+               Reemplazar href con el link de pago de GHL / Stripe.
+               Si GHL usa un elemento nativo de pago, insertar aquí.
+          ─────────────────────────────────────────────────────────── -->
+          <a
+            id="pago"
+            href="REEMPLAZAR_CON_LINK_DE_PAGO"
+            class="bg-primary-container text-on-primary-container text-body-md px-xl py-md rounded-xl font-bold uppercase tracking-tight hover:brightness-110 transition-all text-center"
+          >
+            CONTRATAR CONSULTORÍA →
+          </a>
+
+        </div>
+
+        <!-- Stats de credibilidad -->
+        <div class="mt-xl grid grid-cols-2 gap-md w-full">
+          <div class="tonal-layer-1 p-md rounded-xl flex flex-col gap-xs">
+            <span class="text-primary text-headline-lg font-bold">+15 Años</span>
+            <span class="text-on-surface-variant text-body-sm">De experiencia técnica</span>
+          </div>
+          <div class="tonal-layer-1 p-md rounded-xl flex flex-col gap-xs">
+            <span class="text-primary text-headline-lg font-bold">500+</span>
+            <span class="text-on-surface-variant text-body-sm">Empresas asesoradas</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Derecha: VIDEO del CEO -->
+      <div class="relative">
+        <!-- Glow decorativo -->
+        <div class="absolute -inset-4 bg-primary-container/20 blur-[100px] rounded-full opacity-50 pointer-events-none"></div>
+
+        <div class="relative z-10 rounded-[2rem] overflow-hidden border border-outline-variant/30 p-1 bg-surface-container">
+
+          <!-- ── VIDEO DEL CEO (Sergi Cebreiro) ──────────────────────
+               Opción A — YouTube: reemplazar VIDEO_ID_DE_YOUTUBE
+                 src="https://www.youtube.com/embed/VIDEO_ID_DE_YOUTUBE?rel=0&modestbranding=1"
+
+               Opción B — Vimeo: reemplazar VIDEO_ID_DE_VIMEO
+                 src="https://player.vimeo.com/video/VIDEO_ID_DE_VIMEO"
+
+               Opción C — archivo propio (mp4):
+                 <video controls poster="THUMBNAIL.jpg">
+                   <source src="VIDEO.mp4" type="video/mp4"/>
+                 </video>
+          ─────────────────────────────────────────────────────────── -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_DE_YOUTUBE?rel=0&modestbranding=1&color=white"
+              title="Consultoría fiscal con Sergi Cebreiro — CEO Zona Fiscal"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <!-- Badge sobre el video -->
+          <div class="glass-effect p-md rounded-2xl mt-1">
+            <div class="flex items-center gap-md">
+              <div class="flex -space-x-4">
+                <div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-container flex items-center justify-center font-bold text-xs text-on-primary-container">SC</div>
+                <div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined scale-75">verified</span>
+                </div>
+              </div>
+              <div>
+                <div class="text-on-surface font-bold text-body-md">Sergi Cebreiro</div>
+                <div class="text-on-surface-variant text-body-sm">CEO · Zona Fiscal</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICIOS
+  ═══════════════════════════════════════════ -->
+  <section class="bg-surface-container-low py-xl border-t border-outline-variant">
+    <div class="max-w-max-width mx-auto px-gutter">
+      <div class="mb-lg text-center">
+        <h2 class="text-headline-lg font-semibold text-on-surface">Servicios Especializados</h2>
+        <p class="text-on-surface-variant text-body-md mt-2">Soluciones precisas para entornos fiscales complejos</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+        <div class="tonal-layer-1 p-lg rounded-2xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">business_center</span>
+          <h3 class="text-headline-md mb-2">Asesoría Corporativa</h3>
+          <p class="text-on-surface-variant text-body-sm">Estructuración fiscal de empresas y optimización de flujos operativos nacionales e internacionales.</p>
+        </div>
+        <div class="tonal-layer-1 p-lg rounded-2xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">account_balance_wallet</span>
+          <h3 class="text-headline-md mb-2">Auditoría Tributaria</h3>
+          <p class="text-on-surface-variant text-body-sm">Revisión exhaustiva para garantizar el 100% de cumplimiento y detectar oportunidades de ahorro.</p>
+        </div>
+        <div class="tonal-layer-1 p-lg rounded-2xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">gavel</span>
+          <h3 class="text-headline-md mb-2">Defensa Fiscal</h3>
+          <p class="text-on-surface-variant text-body-sm">Representación ante autoridades fiscales en procesos de fiscalización y recursos administrativos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECCIÓN DE PAGO / CTA FINAL
+  ═══════════════════════════════════════════ -->
+  <section class="py-xl border-t border-outline-variant">
+    <div class="max-w-max-width mx-auto px-gutter text-center flex flex-col items-center gap-md">
+      <h2 class="text-headline-lg font-bold text-on-surface">¿Listo para optimizar tu situación fiscal?</h2>
+      <p class="text-on-surface-variant text-body-lg max-w-xl">
+        Reservá tu consultoría con Sergi Cebreiro directamente. Plazas limitadas.
+      </p>
+
+      <!-- ── BLOQUE DE PAGO GHL ─────────────────────────────────────
+           Si GHL tiene un widget/embed de pago nativo, pegarlo aquí.
+           Si es un link externo (Stripe, etc.), actualizar el href.
+      ─────────────────────────────────────────────────────────────── -->
+      <a
+        href="REEMPLAZAR_CON_LINK_DE_PAGO"
+        class="bg-primary-container text-on-primary-container text-body-lg px-xl py-md rounded-xl font-bold uppercase tracking-tight hover:brightness-110 transition-all mt-md"
+      >
+        CONTRATAR CONSULTORÍA →
+      </a>
+
+      <p class="text-on-surface-variant text-body-sm mt-xs">Pago seguro · Acceso inmediato</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="bg-surface-container-lowest border-t border-outline-variant">
+    <div class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl w-full max-w-max-width mx-auto gap-base">
+      <div class="flex flex-col items-start gap-xs">
+        <div class="text-headline-md font-black text-on-surface">ZONA FISCAL.</div>
+        <p class="text-body-sm text-on-surface-variant max-w-sm">
+          © 2024 Zona Fiscal. Todos los derechos reservados.
+        </p>
+      </div>
+      <div class="flex gap-lg">
+        <div class="flex flex-col gap-xs">
+          <span class="text-on-surface font-bold text-label-md mb-2">Enlaces</span>
+          <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacidad</a>
+          <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Términos de Servicio</a>
+        </div>
+        <div class="flex flex-col gap-xs">
+          <span class="text-on-surface font-bold text-label-md mb-2">Social</span>
+          <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">LinkedIn</a>
+          <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
